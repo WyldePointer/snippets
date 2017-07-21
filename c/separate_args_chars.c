@@ -29,16 +29,29 @@
 
 int main(int argc, char *argv[]){
 
-  int i;
+  int i, j;
 
   if (argc < 2){
     printf("Usage: %s some text here\n", argv[0]);
     return -1;
   }
 
+  j=0;
+
   for (i=1; i<argc; ++i){
 
-    printf("%s\n", argv[i]);
+    while (argv[i][j] != '\0'){
+      printf("%c", argv[i][j]);
+      ++j;
+    }
+
+    /*
+     * Comment the following printf() if you don't want to see
+     * the (Nchars) at each line.
+     */
+    printf("(%dchars)\n", j);
+
+    j=0;
 
   }
 
