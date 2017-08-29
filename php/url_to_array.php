@@ -4,7 +4,7 @@ function url_to_array(){
 
   $sorted = array();
 
-  $all = explode('/', $_SERVER["REQUEST_URI"]);
+  $all = explode('/', urldecode($_SERVER["REQUEST_URI"]));
 
   unset($all[0]);  /* Removing the empty index from the beginning of array */
 
