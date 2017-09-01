@@ -24,10 +24,6 @@ char *arabic_numbers_to_latin(char *numbers){
 
   for (i=1; i<=length*2; i++){
 
-    if (i%2==0){
-      continue;
-    }
-
     current_letter[0] = numbers[i-1];
     current_letter[1] = numbers[i];
     current_letter[2] = '\0';
@@ -55,6 +51,7 @@ char *arabic_numbers_to_latin(char *numbers){
     } 
 
     j++;
+    i++;
 
   }
 
