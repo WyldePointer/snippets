@@ -83,7 +83,7 @@ void callback_maximum_attempts(unsigned int id){
 /* DoD 5220.22-M */
 unsigned int wipe(Unit *unit){
 
-  unsigned int pass = 1;
+  unsigned int pass = 0;
 
   printf("wipe(%d); ", unit->_DEMO_id); 
 
@@ -93,7 +93,7 @@ unsigned int wipe(Unit *unit){
 
   /* Pass 3: Writing a random character and verify the write */
 
-  while (pass++ <= 3){
+  while (pass++ < 3){
 
     printf("Pass %d ", pass);
 
@@ -109,7 +109,7 @@ unsigned int wipe(Unit *unit){
 
   printf("\n");
 
-  return (rand() % 3);
+  return 1;
 }
 
 void destroy(Unit *unit){
