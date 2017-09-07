@@ -36,21 +36,13 @@ int main(void){
 
   for (i=10; i>=1; i--){
 
-    if (i%2){
-      x=9;
-    }else{
-      x=0;
-    }
+    x = (i%2) ? 9 : 0;
 
     for (j=10, k=x; j>=1; j--){
 
       printf("%3.d ", (i*10)-k);
 
-      if (i%2){
-        k--;
-      }else{
-        k++;
-      }
+      k = (i%2) ? k-1 : k+1;
 
     }
 
