@@ -61,7 +61,7 @@
 #include <time.h>
 
 
-unsigned destroyed_units_count = 0;
+unsigned int destroyed_units_count = 0;
 unsigned int max_destroy_attempts = 3;
 const struct timespec _DEMO_slowness = {0, 800000000};
 time_t t;
