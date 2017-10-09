@@ -30,23 +30,23 @@
 
 int main(void){
 
-  int i, j, k, x;
-
-  i=j=k=x=0;
+  unsigned int i, j, k, m;
 
   for (i=10; i>=1; i--){
 
-    x = (i%2) ? 9 : 0;
+    m = i%2;
 
-    for (j=10, k=x; j>=1; j--){
+    k = m ? 9 : 0;
+
+    for (j=10; j>=1; j--){
 
       printf("%3.d ", (i*10)-k);
 
-      k = (i%2) ? k-1 : k+1;
+      k = m ? k-1 : k+1;
 
     }
 
-    printf("\n");
+    putc('\n', stdout);
 
   }
 
